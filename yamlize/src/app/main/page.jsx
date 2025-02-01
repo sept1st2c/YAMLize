@@ -58,27 +58,35 @@ const Header = () => (
         {[...Array(6)].map((_, i) => (
           <React.Fragment key={i}>
             <div className="flex items-center space-x-1">
-              <span className="text-green-400 text-xs">▶</span>
+              <span className="text-green-400 text-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5"><path fill="#76B900" d="M23.5 4H9v16h14.5z"></path><path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path><path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path><path fill="#76B900" d="M2.592 10.915s2.136-3.157 6.417-3.488V6.276C4.266 6.66.168 10.671.168 10.671S2.487 17.384 9 17.994v-1.22c-4.778-.594-6.408-5.86-6.408-5.86"></path></svg>
+              </span>
               <span>rtx6000-ada</span>
-              <span className="bg-gray-700 px-1 rounded text-xs">a16</span>
+              <span className="bg-white px-1 rounded text-black text-xs font-bold">x16</span>
               <span>$0.85/hr</span>
             </div>
             <div className="flex items-center space-x-1">
-              <span className="text-green-400 text-xs">▶</span>
+              <span className="text-green-400 text-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5"><path fill="#76B900" d="M23.5 4H9v16h14.5z"></path><path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path><path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path><path fill="#76B900" d="M2.592 10.915s2.136-3.157 6.417-3.488V6.276C4.266 6.66.168 10.671.168 10.671S2.487 17.384 9 17.994v-1.22c-4.778-.594-6.408-5.86-6.408-5.86"></path></svg>
+              </span>
               <span>t1000</span>
-              <span className="bg-gray-700 px-1 rounded text-xs">a1</span>
+              <span className="bg-white px-1 rounded text-black text-xs font-bold">x8</span>
               <span>$0.06/hr</span>
             </div>
             <div className="flex items-center space-x-1">
-              <span className="text-green-400 text-xs">▶</span>
+              <span className="text-green-400 text-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5"><path fill="#76B900" d="M23.5 4H9v16h14.5z"></path><path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path><path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path><path fill="#76B900" d="M2.592 10.915s2.136-3.157 6.417-3.488V6.276C4.266 6.66.168 10.671.168 10.671S2.487 17.384 9 17.994v-1.22c-4.778-.594-6.408-5.86-6.408-5.86"></path></svg>
+              </span>
               <span>rtx4090</span>
-              <span className="bg-gray-700 px-1 rounded text-xs">450</span>
+              <span className="bg-white px-1 rounded text-black text-xs font-bold">x1</span>
               <span>$0.27/hr</span>
             </div>
             <div className="flex items-center space-x-1">
-              <span className="text-green-400 text-xs">▶</span>
+              <span className="text-green-400 text-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5"><path fill="#76B900" d="M23.5 4H9v16h14.5z"></path><path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path><path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path><path fill="#76B900" d="M2.592 10.915s2.136-3.157 6.417-3.488V6.276C4.266 6.66.168 10.671.168 10.671S2.487 17.384 9 17.994v-1.22c-4.778-.594-6.408-5.86-6.408-5.86"></path></svg>
+              </span>
               <span>h100</span>
-              <span className="bg-gray-700 px-1 rounded text-xs">a8</span>
+              <span className="bg-white px-1 rounded text-black text-xs font-bold">x50</span>
               <span>$2.46/hr</span>
             </div>
           </React.Fragment>
