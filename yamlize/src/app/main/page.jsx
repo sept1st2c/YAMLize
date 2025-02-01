@@ -11,22 +11,32 @@ const Header = () => (
           <span className="ml-2 font-semibold">Console</span>
         </div>
       </div>
-      
+
       <nav className="flex items-center space-x-8">
         <a href="#" className="text-gray-600 hover:text-gray-900 flex items-center space-x-2">
-          <span className="text-gray-400">⬚</span>
+          <span className="text-gray-400 ">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12px" width="12px" viewBox="0 0 24 24" class="w-5 h-5">
+              <path fill="white" stroke="rgb(92, 92, 102)" stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm10 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM4 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm10 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path>
+            </svg>
+          </span>
           <span>Dashboard</span>
         </a>
         <a href="#" className="text-gray-600 hover:text-gray-900 flex items-center space-x-2">
-          <span className="text-gray-400">🛍</span>
+          <span className="text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" class="w-5 h-5"><path fill="rgb(92, 92, 102)"  d="M4.529 9.333A2.75 2.75 0 0 1 7.26 6.25h9.538a2.75 2.75 0 0 1 2.737 3.015l-.124 1.289a5.75 5.75 0 0 1-5.724 5.196h-3.283a5.75 5.75 0 0 1-5.708-5.054zM7.26 7.75a1.25 1.25 0 0 0-1.241 1.401l.166 1.364a4.25 4.25 0 0 0 4.219 3.735h3.283a4.25 4.25 0 0 0 4.23-3.84l.125-1.29a1.25 1.25 0 0 0-1.244-1.37z" clip-rule="evenodd"></path><path fill="rgb(92, 92, 102)" fill-rule="evenodd" d="M3.272 4.818a.75.75 0 0 1 .91-.546l.466.117a3.63 3.63 0 0 1 2.564 2.374.75.75 0 0 1-1.424.474 2.13 2.13 0 0 0-1.504-1.393l-.466-.116a.75.75 0 0 1-.546-.91M15.5 17.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m-2.25.75a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0M8.5 17.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m-2.25.75a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0" clip-rule="evenodd"></path></svg>
+          </span>
           <span>Marketplace</span>
         </a>
         <a href="#" className="text-gray-600 hover:text-gray-900 flex items-center space-x-2">
-          <span className="text-gray-400">🤖</span>
+          <span className="text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="w-5 h-5"><path fill="rgb(92, 92, 102)" d="M9.998 2a.36.36 0 0 0-.174.043L7.227 3.49l2.771 1.51 2.782-1.5-2.608-1.456A.36.36 0 0 0 9.998 2m-3.13 2.087v.988L3.566 6.912a.35.35 0 0 0-.174.304v3l-1.054.587 2.793 1.5 2.76-1.511-2.586-1.446a.37.37 0 0 0-.348 0l-.87.478V7.423L6.87 5.88v1.108c0 .126.063.243.173.304l2.609 1.446v-3.13zm6.26.021-2.782 1.5v3.13l2.608-1.446a.34.34 0 0 0 .174-.304V5.88l2.782 1.543v2.412l-.87-.489a.37.37 0 0 0-.347 0l-2.597 1.446 2.77 1.51 2.761-1.51-1.021-.576v-3a.34.34 0 0 0-.174-.304l-3.304-1.837zm-4.868 7.27-2.782 1.533v3.13l.456-.25 3.89 2.162c.108.063.24.063.348 0l3.89-2.162.457.25v-3.13l-2.782-1.522v2.902c0 .126.064.243.174.304l1.434.793-3.347 1.859-3.347-1.858 1.435-.794a.34.34 0 0 0 .174-.304zm9.737 0-2.782 1.533v3.13l2.608-1.446a.34.34 0 0 0 .174-.304zM2 11.411v2.88c0 .126.064.243.174.304l2.608 1.446v-3.13z"></path></svg>
+          </span>
           <span>Models</span>
         </a>
         <a href="#" className="text-gray-600 hover:text-gray-900 flex items-center space-x-2">
-          <span className="text-gray-400">▣</span>
+          <span className="text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="w-5 h-5"><path fill="rgb(92, 92, 102)" d="M3 1a2 2 0 0 0-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2V3a2 2 0 0 0-2-2zm0 4h14v12H3zm5 2.793L4.793 11 8 14.207l1-1L6.793 11 9 8.793zm4 0-1 1L13.207 11 11 13.207l1 1L15.207 11z"></path></svg>
+          </span>
           <span>Playground</span>
         </a>
       </nav>
@@ -194,7 +204,7 @@ const SpheronInterface = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <main className="container mx-auto px-6 py-8">
         <div className="flex justify-between items-start space-x-8">
           <div className="w-2/3">
@@ -209,7 +219,7 @@ const SpheronInterface = () => {
             </div>
             <YamlEditor />
           </div>
-          
+
           <div className="w-1/3">
             <button className="w-full bg-black text-white px-6 py-2.5 rounded font-medium mb-4">
               Start Deployment
