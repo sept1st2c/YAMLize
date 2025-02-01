@@ -1,4 +1,3 @@
-// src/app/chatbot/page.jsx
 "use client"; // Add this directive for client-side functionality
 
 import { useState } from "react";
@@ -28,21 +27,38 @@ export default function ChatbotPage() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
+      <div className="h-64 overflow-y-auto mb-4">
         {messages.map((msg, index) => (
-          <div key={index} className={msg.sender}>
-            <strong>{msg.sender}:</strong> {msg.text}
+          <div
+            key={index}
+            className={`my-2 p-2 rounded-lg max-w-xs ${
+              msg.sender === "user" ? "bg-blue-100 self-end" : "bg-gray-100"
+            }`}
+          >
+            <strong className="block text-xs text-gray-500">
+              {msg.sender === "user" ? "You" : "Bot"}
+            </strong>
+            <p className="text-sm text-gray-800">{msg.text}</p>
           </div>
         ))}
       </div>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyPress={(e) => e.key === "Enter" && handleSend()}
-      />
-      <button onClick={handleSend}>Send</button>
+      <div className="flex items-center space-x-2">
+        <input
+          type="text"
+          className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Type your message..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={(e) => e.key === "Enter" && handleSend()}
+        />
+        <button
+          onClick={handleSend}
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        >
+          Send
+        </button>
+      </div>
     </div>
   );
 }
