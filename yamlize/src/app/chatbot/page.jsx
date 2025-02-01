@@ -5,32 +5,26 @@ import { useState } from "react";
 import { fetchGeminiResponse } from "../utils/fetchGeminiResponse";
 
 export default function ChatbotPage() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]); // Stores the conversation history
   const [input, setInput] = useState("");
 
   const handleSend = async () => {
     if (input.trim() === "") return;
 
-    // Add user message to the chat
+    // Add user message to the chat history
     const userMessage = { text: input, sender: "user" };
-    setMessages((prevMessages) => [...prevMessages, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
 
     // Clear input
     setInput("");
 
-    // Define context (customize this based on your app's needs)
-    const context = {
-      user: "traveler",
-      destination: "Paris",
-      dates: "2023-12-01 to 2023-12-10",
-    };
+    // Call Google Generative AI API with user input and conversation history
+    const botResponse = await fetchGeminiResponse(input, updatedMessages);
 
-    // Call Google Generative AI API with user input and context
-    const botResponse = await fetchGeminiResponse(input, context);
-
-    // Add bot response to the chat
+    // Add bot response to the chat history
     const botMessage = { text: botResponse, sender: "bot" };
-    setMessages((prevMessages) => [...prevMessages, botMessage]);
+    setMessages([...updatedMessages, botMessage]);
   };
 
   return (
@@ -38,7 +32,7 @@ export default function ChatbotPage() {
       <div>
         {messages.map((msg, index) => (
           <div key={index} className={msg.sender}>
-            {msg.text}
+            <strong>{msg.sender}:</strong> {msg.text}
           </div>
         ))}
       </div>
