@@ -171,7 +171,7 @@ const YamlEditor = () => (
 );
 
 const Instructions = () => (
-  <div className="space-y-6">
+  <div className="space-y-6 w-1/3 py-20">
     <h2 className="text-gray1 text-lg font-semibold flex items-center justify-between">
       Playground Instructions:
       <a href="#" className="text-black text-xs font-thin hover:underline">Learn about ICL →</a>
@@ -221,22 +221,23 @@ const SpheronInterface = () => {
                 <h1 className="text-2xl font-bold text-gray-900">Test Your Application in Real-Time</h1>
                 <p className="text-gray-600 mt-1">Configure your deployment using the YAML CLI</p>
               </div>
-              <button className="text-sm text-gray-500 hover:text-gray-700 px-3 py-1 rounded border border-gray-300">
-                Clear
+              <button className=" bg-black text-white px-7 py-2.5 rounded font-medium mb-4">
+                Start Deployment
               </button>
             </div>
             <YamlEditor />
           </div>
 
-          <div className="w-1/3">
+          {/* <div className="w-1/3">
             <button className="w-full bg-black text-white px-6 py-2.5 rounded font-medium mb-4">
               Start Deployment
             </button>
             <button className="w-full border border-gray-300 px-6 py-2.5 rounded font-medium mb-8">
               Get Sample YAML
             </button>
-            <Instructions />
-          </div>
+            
+          </div> */}
+          <Instructions />
         </div>
       </main>
     </div>
