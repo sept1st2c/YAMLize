@@ -55,29 +55,29 @@ const Header = () => (
     </div>
 
     <div className="bg-black text-white py-1 overflow-hidden w-screen">
-  <div className="flex w-max animate-marquee space-x-4">
-    {[...Array(3)].map((_, index) => (
-      <div key={index} className="flex">
-        {[...Array(10)].map((_, i) => (
-          <div key={i} className="flex items-center space-x-4 px-4">
-            <div className="flex items-center space-x-1">
-              <span className="text-green-400 text-xs">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5">
-                  <path fill="#76B900" d="M23.5 4H9v16h14.5z"></path>
-                  <path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path>
-                  <path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path>
-                </svg>
-              </span>
-              <span>rtx6000-ada</span>
-              <span className="bg-white px-1 rounded text-black text-xs font-bold">x16</span>
-              <span>$0.85/hr</span>
-            </div>
+      <div className="flex w-max animate-marquee space-x-4">
+        {[...Array(3)].map((_, index) => (
+          <div key={index} className="flex">
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="flex items-center space-x-4 px-4">
+                <div className="flex items-center space-x-1">
+                  <span className="text-green-400 text-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-5 h-5">
+                      <path fill="#76B900" d="M23.5 4H9v16h14.5z"></path>
+                      <path fill="#FAFAFA" d="M9 8.84c.26-.025.525-.045.785-.035 2.475 0 3.95 1.925 3.95 1.925l-2.015 1.695c-.9-1.51-1.215-2.175-2.72-2.355zm0 5.52c.365.12.76.18 1.15.18 2.94 0 5.675-3.8 5.675-3.8S13.29 7.285 9.42 7.41c-.14 0-.28.01-.42.015v-1.15l.42-.025c5.38-.185 8.89 4.41 8.89 4.41s-4.025 4.9-8.22 4.9c-.365 0-.735-.035-1.09-.095zm.975 3.685a9 9 0 0 1-.975-.05v-1.22c.295.035.61.06.905.06 3.91 0 6.735-1.995 9.47-4.35.455.365 2.31 1.245 2.695 1.63-2.6 2.18-8.66 3.93-12.095 3.93"></path>
+                      <path fill="#76B900" d="M9 14.359v1.116c-3.61-.646-4.612-4.403-4.612-4.403S6.123 9.154 9 8.84v1.22h-.008c-1.509-.183-2.694 1.23-2.694 1.23s.67 2.38 2.702 3.069"></path>
+                    </svg>
+                  </span>
+                  <span>rtx6000-ada</span>
+                  <span className="bg-white px-1 rounded text-black text-xs font-bold">x16</span>
+                  <span>$0.85/hr</span>
+                </div>
+              </div>
+            ))}
           </div>
         ))}
       </div>
-    ))}
-  </div>
-</div>
+    </div>
 
 
     <style jsx global>{`
@@ -183,7 +183,7 @@ const YamlEditor = () => (
 );
 
 const Instructions = () => (
-  <div className="space-y-6 w-1/3 py-20">
+  <div className="space-y-6 w-3/4 py-6">
     <h2 className="text-gray1 text-lg font-semibold flex items-center justify-between">
       Playground Instructions:
       <a href="#" className="text-black text-xs font-thin hover:underline">Learn about ICL →</a>
@@ -225,15 +225,15 @@ const SpheronInterface = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-3 py-8">
         <div className="flex justify-between items-start space-x-8">
-          <div className="w-2/3">
+          <div className="w-full">
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Test Your Application in Real-Time</h1>
                 <p className="text-gray-600 mt-1">Configure your deployment using the YAML CLI</p>
               </div>
-              <button className=" bg-black text-white px-7 py-2.5 rounded font-medium mb-4">
+              <button className="bg-black text-white px-7 py-2.5 rounded font-medium mb-4">
                 Start Deployment
               </button>
             </div>
@@ -249,7 +249,15 @@ const SpheronInterface = () => {
             </button>
             
           </div> */}
+          <div className='w-2/3'>
+          <button className=" bg-black text-white px-7 py-2.5 rounded font-medium mb-4">
+            Start Chat
+          </button>
           <Instructions />
+          </div>
+          
+
+
         </div>
       </main>
     </div>
