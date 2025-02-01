@@ -172,28 +172,28 @@ const YamlEditor = () => (
 
 const Instructions = () => (
   <div className="space-y-6">
-    <h2 className="text-lg font-semibold flex items-center justify-between">
+    <h2 className="text-gray1 text-lg font-semibold flex items-center justify-between">
       Playground Instructions:
-      <a href="#" className="text-blue-600 text-sm hover:underline">Learn about ICL →</a>
+      <a href="#" className="text-black text-xs font-thin hover:underline">Learn about ICL →</a>
     </h2>
-    <ol className="space-y-4 list-decimal pl-4 text-gray-600">
-      <li>Enter your deployment configuration in the required <span className="font-medium text-gray-900">YAML</span> format.</li>
+    <ol className="space-y-4 list-decimal pl-4 text-gray1">
+      <li>Enter your deployment configuration in the required <span className="font-semibold text-gray1">YAML</span> format.</li>
       <li>
         Make sure you have enough test ETH in your wallet to cover the testing and deployment.{' '}
-        <a href="#" className="text-blue-600 hover:underline">Get ETH from Faucet</a>{' '}
+        <a href="#" className="font-semibold underline">Get ETH from Faucet</a>{' '}
         or use Arbitrum Sepolia ETH and{' '}
-        <a href="#" className="text-blue-600 hover:underline">bridge</a>{' '}
+        <a href="#" className="text-gray1 font-semibold underline">bridge</a>{' '}
         it to the Spheron Chain to complete your registration.
       </li>
       <li>
         Check out{' '}
-        <a href="#" className="text-blue-600 hover:underline">provider.spheron.network</a>{' '}
+        <a href="#" className="text-gray1 font-semibold underline">provider.spheron.network</a>{' '}
         or{' '}
-        <a href="#" className="text-blue-600 hover:underline">fizz.spheron.network</a>{' '}
+        <a href="#" className="text-gray1 font-semibold underline">fizz.spheron.network</a>{' '}
         to see the available GPUs and deployment regions.
       </li>
       <li>
-        Click "Start Deployment" to start your deployment and see the output in real-time.
+        Click <span className="font-semibold text-gray1">"Start Deployment"</span> to start your deployment and see the output in real-time.
       </li>
     </ol>
 
