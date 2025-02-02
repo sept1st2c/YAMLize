@@ -274,24 +274,45 @@ const SpheronInterface = () => {
             </div>
             <YamlEditor />
           </div>
-
-          {/* <div className="w-1/3">
-            <button className="w-full bg-black text-white px-6 py-2.5 rounded font-medium mb-4">
-              Start Deployment
-            </button>
-            <button className="w-full border border-gray-300 px-6 py-2.5 rounded font-medium mb-8">
-              Get Sample YAML
-            </button>
-            
-          </div> */}
           <div className="w-2/3">
             <button
-              className=" bg-black text-white px-7 py-2.5 rounded font-medium mb-4"
+              className="bg-black text-white px-7 py-2.5 rounded font-medium mb-4"
               onClick={handleStartChat}
             >
               Start Chat
             </button>
-            {showChatbot && <ChatbotPage />}
+            {showChatbot && (
+              <div className="fixed bottom-5 right-5 w-80 h-96 max-h-[80vh] bg-white border border-gray-300 rounded-lg shadow-lg flex flex-col overflow-auto z-50">
+                {/* Chat Header */}
+                <div className="bg-blue-500 text-white text-center py-3 rounded-t-lg cursor-pointer">
+                  Start Chat
+                </div>
+
+                {/* Chat Body */}
+                <div
+                  className="flex-grow overflow-y-auto p-4 bg-gray-100"
+                  id="chatBody"
+                >
+                  {/* Messages will be appended here */}
+                </div>
+
+                {/* Input Area */}
+                <div className="flex p-4 border-t border-gray-300 bg-white">
+                  <input
+                    type="text"
+                    id="chatInput"
+                    className="w-4/5 p-2 border border-gray-300 rounded-md"
+                    placeholder="Type your message..."
+                  />
+                  <button
+                    className="w-1/5 p-2 bg-blue-500 text-white rounded-md ml-2"
+                    id="sendMessage"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            )}
             <Instructions />
           </div>
         </div>
@@ -299,5 +320,4 @@ const SpheronInterface = () => {
     </div>
   );
 };
-
 export default SpheronInterface;
