@@ -3,6 +3,7 @@ import { useState } from "react";
 import React from "react";
 import { Menu, User } from "lucide-react";
 import ChatbotPage from "../chatbot/page";
+import YamlEditor from "../components/YamlEditor";
 
 const Header = () => (
   <header className="border-b border-gray-200">
@@ -185,80 +186,6 @@ const Header = () => (
       }
     `}</style>
   </header>
-);
-
-const YamlEditor = () => (
-  <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-    <pre className="p-6 text-sm font-mono">
-      <span className="text-blue-600">- community</span>
-      <br />
-      <span className="text-blue-600">compute:</span>
-      <br />
-      <span className="text-blue-600">{"  "}gpu-test:</span>
-      <br />
-      <span className="text-blue-600">{"    "}resources:</span>
-      <br />
-      <span className="text-blue-600">{"      "}cpu:</span>
-      <br />
-      <span className="text-blue-600">{"        "}units:</span>
-      <span className="text-green-600"> 1</span>
-      <br />
-      <span className="text-blue-600">{"      "}memory:</span>
-      <br />
-      <span className="text-blue-600">{"        "}size:</span>
-      <span className="text-green-600"> 20Gi</span>
-      <br />
-      <span className="text-blue-600">{"      "}storage:</span>
-      <br />
-      <span className="text-blue-600">{"        "}- size:</span>
-      <span className="text-green-600"> 100Gi</span>
-      <br />
-      <span className="text-blue-600">{"      "}gpu:</span>
-      <br />
-      <span className="text-blue-600">{"        "}units:</span>
-      <span className="text-green-600"> 1</span>
-      <br />
-      <span className="text-blue-600">{"        "}attributes:</span>
-      <br />
-      <span className="text-blue-600">{"          "}vendor:</span>
-      <br />
-      <span className="text-blue-600">{"            "}nvidia:</span>
-      <br />
-      <span className="text-blue-600">{"              "}- model:</span>
-      <span className="text-green-600"> rtx4090</span>
-      <br />
-      <span className="text-blue-600">{"    "}placement:</span>
-      <br />
-      <span className="text-blue-600">{"      "}westcoast:</span>
-      <br />
-      <span className="text-blue-600">{"        "}attributes:</span>
-      <br />
-      <span className="text-blue-600">{"          "}region:</span>
-      <span className="text-green-600"> us-central</span>
-      <br />
-      <span className="text-blue-600">{"    "}pricing:</span>
-      <br />
-      <span className="text-blue-600">{"      "}gpu-test:</span>
-      <br />
-      <span className="text-blue-600">{"        "}token:</span>
-      <span className="text-green-600"> CST</span>
-      <br />
-      <span className="text-blue-600">{"        "}amount:</span>
-      <span className="text-green-600"> 5</span>
-      <br />
-      <span className="text-blue-600">deployment:</span>
-      <br />
-      <span className="text-blue-600">{"  "}gpu-test:</span>
-      <br />
-      <span className="text-blue-600">{"    "}westcoast:</span>
-      <br />
-      <span className="text-blue-600">{"      "}profile:</span>
-      <span className="text-green-600"> gpu-test</span>
-      <br />
-      <span className="text-blue-600">{"      "}count:</span>
-      <span className="text-green-600"> 1</span>
-    </pre>
-  </div>
 );
 
 const Instructions = () => (

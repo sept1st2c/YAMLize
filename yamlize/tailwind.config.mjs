@@ -10,7 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        gray1:"rgb(68, 68, 75)",
+        gray1: "rgb(68, 68, 75)",
       },
     },
   },

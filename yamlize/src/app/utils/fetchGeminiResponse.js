@@ -1,60 +1,55 @@
+// src/app/utils/fetchGeminiResponse.js
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import fs from "fs";
-import path from "path";
-import yaml from "js-yaml";
+import { guide } from "./guide";
 
 // Initialize the Generative AI client
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
 
-// Load YAML structure data from `/data/data.json`
-const dataPath = path.join(process.cwd(), "data", "data.json");
-const yamlReference = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+// Directly convert guide object to string once during initialization if the guide doesn't change
+const guideString = JSON.stringify(guide, null, 2);
 
 export async function fetchGeminiResponse(userInput, conversationHistory) {
   try {
+    // Get the generative model (e.g., "gemini-pro")
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-    // Format conversation history as context
-    const history = conversationHistory
+    // Format the conversation history into a single prompt efficiently
+    const formattedHistory = conversationHistory
       .map((msg) => `${msg.sender}: ${msg.text}`)
       .join("\n");
 
-    // Construct the AI prompt
+    // Define the structured prompt
     const prompt = `
-      You are an AI assistant helping users generate valid Spheron Infrastructure Composition Language (ICL) YAML configurations.
-      Your task is to convert user requirements into valid YAML while ensuring correctness.
+    You are an AI assistant for generating valid Spheron Infrastructure Composition Language (ICL) YAML configurations. Your task is to:
 
-      - Use the YAML structure reference below:
-      ${JSON.stringify(yamlReference, null, 2)}
+    - Use the YAML configuration guide reference below
+    - Validate and improve YAML configurations
+    - Refine YAML based on user modifications
+    - Only write the YAML and for unrelated inputs, respond with: "Please elaborate on the following instruction"
 
-      - Correct any mistakes and validate the YAML.
-      - Make improvements if needed based on best practices.
-      - If the user asks for modifications, refine the YAML accordingly.
+    Guide:
+    ${guideString}
 
-      Conversation History:
-      ${history}
+    Conversation History:
+    ${formattedHistory}
 
-      New User Input: ${userInput}
+    New User Input: ${userInput}
 
-      Respond only with the YAML code. And if the input is not related to it, reply with "Please elaborate on the following instruction"
+    - Do not place the YAML in a single line.
+    - Each YAML key-value pair should be on a new line, properly indented.
+    - Ensure the YAML is human-readable and follows best practices.
+    do not need to put "\`\`\`" at start and end
     `;
 
-    // Generate a response
+    // Generate a response from the model
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const generatedYaml = response.text();
 
-    // Validate YAML format
-    try {
-      yaml.load(generatedYaml);
-    } catch (yamlError) {
-      console.error("Generated YAML is invalid:", yamlError);
-      return "Error: The generated YAML is invalid. Please refine your request.";
-    }
-
-    return generatedYaml;
+    // Return only the generated YAML text
+    return response.text();
   } catch (error) {
     console.error("Error fetching Gemini response:", error);
-    return "Sorry, I encountered an error. Please try again later.";
+    // Return a more specific error message
+    return "Sorry, there was an issue with processing your request. Please try again later.";
   }
 }

@@ -14,7 +14,7 @@
     },
     {
       "section_id": "services-configuration",
-      "title": "Service Configuration",
+      "title": "Services Configuration",
       "description": "Defines the workloads for Spheron deployment, including Docker images, commands, environment variables, and port exposure.",
       "subsections": [
         {
@@ -61,7 +61,7 @@
           "content": "profiles.placement is a map of named datacenter profiles. Each profile outlines the necessary datacenter attributes and the pricing configuration for each compute profile that will be utilized within the datacenter.\n\nExample:\n\nuseast:\n  attributes:\n    region: us-east\n  pricing:\n    web:\n      token: USDT\n      amount: 80\n\nThis defines a profile named useast with the required attributes {region=\"us-east\"} and a maximum price of 80 USDT per hour for the web compute profiles."
         }
       ]
-    }, //hh
+    },
     {
       "section_id": "deployment-configuration",
       "title": "Deployment Configuration",

@@ -1,11 +1,20 @@
-import GPUDeploymentInterface from "./clone/page";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Demo from "./components/Demo";
+import Footer from "./components/Footer";
+import "../app/globals.css";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-100">
-      {/* <GPUDeploymentInterface /> */}
-      <div>
-        ahi
-      </div>
-    </main>
+    <div className="app">
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+        <Demo />
+      </main>
+      <Footer />
+    </div>
   );
 }
