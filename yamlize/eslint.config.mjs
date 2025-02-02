@@ -10,10 +10,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = compat.config({
+  extends: ["next/core-web-vitals"], // This should be at the root level of the config
   overrides: [
     {
       files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      extends: ["next/core-web-vitals"],
+      // No need to add 'extends' here as it's already in the root level
     },
   ],
 });
