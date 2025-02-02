@@ -1,3 +1,4 @@
+// eslint.config.mjs
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -10,13 +11,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = compat.config({
-  extends: ["next/core-web-vitals"], // This should be at the root level of the config
-  overrides: [
-    {
-      files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      // No need to add 'extends' here as it's already in the root level
-    },
-  ],
+  extends: ["next/core-web-vitals"], // Only extend core-web-vitals
 });
 
 export default eslintConfig;
